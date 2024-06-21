@@ -16,19 +16,9 @@ class MasterCoordinator: Coordinator {
         switch action {
         case _ as GoToTest:
             let vc = TestNavigateVC()
-            vc.coordinator = self
             self.navigationController.pushViewController(vc, animated: true)
         default:
             handleBaseAction(action: action)
-        }
-    }
-    
-    func eventOccurred(with type: Event) {
-        switch type {
-        case .buttonTapped:
-            let vc = TestNavigateVC()
-            vc.coordinator = self
-            self.navigationController.pushViewController(vc, animated: true)
         }
     }
     
@@ -41,8 +31,8 @@ class MasterCoordinator: Coordinator {
     }
     
     func start() {
-       let vc = HomeVC()
-        vc.coordinator = self
+        let vm = HomeViewModel(actionHandler: self)
+        let vc = HomeVC(viewModel: vm)
         navigationController.setViewControllers([vc], animated: false)
     }
     

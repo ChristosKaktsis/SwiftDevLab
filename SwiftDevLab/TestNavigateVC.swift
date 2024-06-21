@@ -7,8 +7,8 @@
 
 import UIKit
 
-class TestNavigateVC: UIViewController, Coordinating {
-    var coordinator: Coordinator?
+class TestNavigateVC: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
