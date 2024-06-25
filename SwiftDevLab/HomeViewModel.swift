@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Domain
 
 enum HomeEvents {
     case GoToTest
@@ -25,6 +26,10 @@ class HomeViewModel: BaseViewModel {
         case .GoToTest:
             actionHandler?.handleAction(action: GoToTest())
         }
+    }
+    
+    private func createTestUser() {
+        let testUser = TestModel(id: "1", name: "Chris Test")
     }
 }
  
