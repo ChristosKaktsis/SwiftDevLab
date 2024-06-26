@@ -8,6 +8,11 @@ target 'Domain' do
   use_frameworks!
 end
 
+target 'Presentation' do
+  project './Presentation/Presentation.project'
+  use_frameworks!
+end
+
 target 'SwiftDevLab' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
