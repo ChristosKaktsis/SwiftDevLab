@@ -11,7 +11,6 @@
 		206FB550A055CD2DCB8929C9 /* Pods_SwiftDevLabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C208CB994198D9C62F33E9BF /* Pods_SwiftDevLabTests.framework */; };
 		C1B84D642C25778800FBD7D0 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B84D622C25778800FBD7D0 /* HomeVC.swift */; };
 		C1B84D652C25778800FBD7D0 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1B84D632C25778800FBD7D0 /* HomeVC.xib */; };
-		C1B84D7A2C257BBC00FBD7D0 /* BaseNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B84D792C257BBC00FBD7D0 /* BaseNavigation.swift */; };
 		C1B84D7C2C25872300FBD7D0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B84D7B2C25872300FBD7D0 /* HomeViewModel.swift */; };
 		C1B84D7E2C2592A100FBD7D0 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B84D7D2C2592A100FBD7D0 /* BaseViewModel.swift */; };
 		C1EDDFC62C2AA2EF00D6FA62 /* Domain.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C1EDDFC22C2AA28100D6FA62 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -23,7 +22,6 @@
 		C1F57E842C2439D900DD3B90 /* SwiftDevLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F57E832C2439D900DD3B90 /* SwiftDevLabTests.swift */; };
 		C1F57E8E2C2439D900DD3B90 /* SwiftDevLabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F57E8D2C2439D900DD3B90 /* SwiftDevLabUITests.swift */; };
 		C1F57E902C2439D900DD3B90 /* SwiftDevLabUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F57E8F2C2439D900DD3B90 /* SwiftDevLabUITestsLaunchTests.swift */; };
-		C1F57EAD2C243DD600DD3B90 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F57EAC2C243DD600DD3B90 /* Coordinator.swift */; };
 		C1F57EC12C243F1100DD3B90 /* MasterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F57EC02C243F1100DD3B90 /* MasterCoordinator.swift */; };
 		C1F57ED92C24480300DD3B90 /* TestNavigateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F57ED72C24480300DD3B90 /* TestNavigateVC.swift */; };
 		C1F57EDA2C24480300DD3B90 /* TestNavigateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1F57ED82C24480300DD3B90 /* TestNavigateVC.xib */; };
@@ -99,7 +97,6 @@
 		B16141FD6BCAB994EC15728E /* Pods-SwiftDevLabTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDevLabTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftDevLabTests/Pods-SwiftDevLabTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1B84D622C25778800FBD7D0 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		C1B84D632C25778800FBD7D0 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
-		C1B84D792C257BBC00FBD7D0 /* BaseNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigation.swift; sourceTree = "<group>"; };
 		C1B84D7B2C25872300FBD7D0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C1B84D7D2C2592A100FBD7D0 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		C1EDDFBC2C2AA28100D6FA62 /* Domain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Domain.xcodeproj; path = Domain/Domain.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -115,7 +112,6 @@
 		C1F57E892C2439D900DD3B90 /* SwiftDevLabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDevLabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F57E8D2C2439D900DD3B90 /* SwiftDevLabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDevLabUITests.swift; sourceTree = "<group>"; };
 		C1F57E8F2C2439D900DD3B90 /* SwiftDevLabUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDevLabUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C1F57EAC2C243DD600DD3B90 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C1F57EC02C243F1100DD3B90 /* MasterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCoordinator.swift; sourceTree = "<group>"; };
 		C1F57ED72C24480300DD3B90 /* TestNavigateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNavigateVC.swift; sourceTree = "<group>"; };
 		C1F57ED82C24480300DD3B90 /* TestNavigateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestNavigateVC.xib; sourceTree = "<group>"; };
@@ -228,7 +224,6 @@
 		C1F57E6B2C2439D800DD3B90 /* SwiftDevLab */ = {
 			isa = PBXGroup;
 			children = (
-				C1F57EAC2C243DD600DD3B90 /* Coordinator.swift */,
 				C1F57E6C2C2439D800DD3B90 /* AppDelegate.swift */,
 				C1F57E6E2C2439D800DD3B90 /* SceneDelegate.swift */,
 				C1F57E752C2439D800DD3B90 /* Assets.xcassets */,
@@ -239,7 +234,6 @@
 				C1F57ED82C24480300DD3B90 /* TestNavigateVC.xib */,
 				C1B84D622C25778800FBD7D0 /* HomeVC.swift */,
 				C1B84D632C25778800FBD7D0 /* HomeVC.xib */,
-				C1B84D792C257BBC00FBD7D0 /* BaseNavigation.swift */,
 				C1B84D7B2C25872300FBD7D0 /* HomeViewModel.swift */,
 				C1B84D7D2C2592A100FBD7D0 /* BaseViewModel.swift */,
 			);
@@ -509,8 +503,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1F57EAD2C243DD600DD3B90 /* Coordinator.swift in Sources */,
-				C1B84D7A2C257BBC00FBD7D0 /* BaseNavigation.swift in Sources */,
 				C1B84D642C25778800FBD7D0 /* HomeVC.swift in Sources */,
 				C1B84D7C2C25872300FBD7D0 /* HomeViewModel.swift in Sources */,
 				C1F57EC12C243F1100DD3B90 /* MasterCoordinator.swift in Sources */,

@@ -7,6 +7,7 @@
 
 import Foundation
 import Domain
+import Presentation
 
 enum HomeEvents {
     case GoToTest
