@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol BaseViewModel {
+public protocol BaseViewModel {
     associatedtype Event
     func onTriggeredEvent(event: Event)
 }

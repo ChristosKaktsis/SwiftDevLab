@@ -11,5 +11,7 @@ class PokemonListVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Pokemon"
+        view.backgroundColor = .white
     }
 }

@@ -25,7 +25,7 @@ class HomeViewModel: BaseViewModel {
     func onTriggeredEvent(event: Event) {
         switch event {
         case .GoToTest:
-            actionHandler?.handleAction(action: GoToTest())
+            actionHandler?.handleAction(action: GoToPokemon())
         }
     }
     
