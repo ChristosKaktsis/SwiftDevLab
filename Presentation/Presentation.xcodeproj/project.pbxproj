@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		15C7D06744BBB030DEE6AEA4 /* Pods_Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD67E69205A003635F64978 /* Pods_Presentation.framework */; };
+		C1BA73012C2D5871007E28A5 /* Domain.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C1BA72E22C2D563E007E28A5 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C1EDDFE42C2AFFAC00D6FA62 /* Presentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = C1EDDFE32C2AFFAC00D6FA62 /* Presentation.docc */; };
 		C1EDDFEA2C2AFFAC00D6FA62 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1EDDFDF2C2AFFAC00D6FA62 /* Presentation.framework */; };
 		C1EDDFEF2C2AFFAC00D6FA62 /* PresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDDFEE2C2AFFAC00D6FA62 /* PresentationTests.swift */; };
@@ -22,6 +23,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C1BA72E12C2D563E007E28A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1BA72DC2C2D563E007E28A5 /* Domain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C1EDDFA12C2AA13E00D6FA62;
+			remoteInfo = Domain;
+		};
+		C1BA72E32C2D563E007E28A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1BA72DC2C2D563E007E28A5 /* Domain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C1EDDFAB2C2AA13E00D6FA62;
+			remoteInfo = DomainTests;
+		};
 		C1EDDFEB2C2AFFAC00D6FA62 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C1EDDFD62C2AFFAC00D6FA62 /* Project object */;
@@ -31,9 +46,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C1BA72FE2C2D5860007E28A5 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				C1BA73012C2D5871007E28A5 /* Domain.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4808BEF0768D28E65F2DE9D2 /* Pods-Presentation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation.debug.xcconfig"; path = "Target Support Files/Pods-Presentation/Pods-Presentation.debug.xcconfig"; sourceTree = "<group>"; };
 		6FD67E69205A003635F64978 /* Pods_Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1BA72DC2C2D563E007E28A5 /* Domain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Domain.xcodeproj; path = ../../../Domain/Domain.xcodeproj; sourceTree = "<group>"; };
 		C1EDDFDF2C2AFFAC00D6FA62 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1EDDFE22C2AFFAC00D6FA62 /* Presentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
 		C1EDDFE32C2AFFAC00D6FA62 /* Presentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Presentation.docc; sourceTree = "<group>"; };
@@ -79,6 +109,23 @@
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
+		C1BA72DB2C2D5611007E28A5 /* Dependecies */ = {
+			isa = PBXGroup;
+			children = (
+				C1BA72DC2C2D563E007E28A5 /* Domain.xcodeproj */,
+			);
+			path = Dependecies;
+			sourceTree = "<group>";
+		};
+		C1BA72DD2C2D563E007E28A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1BA72E22C2D563E007E28A5 /* Domain.framework */,
+				C1BA72E42C2D563E007E28A5 /* DomainTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C1EDDFD52C2AFFAC00D6FA62 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +149,8 @@
 		C1EDDFE12C2AFFAC00D6FA62 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C1BA72DB2C2D5611007E28A5 /* Dependecies */,
+				C1F8546A2C2C2B50003EBA99 /* Components */,
 				C1F8545C2C2C1A92003EBA99 /* Navigation */,
 				C1F853FF2C2BFAD5003EBA99 /* Pokemon */,
 				C1EDDFE22C2AFFAC00D6FA62 /* Presentation.h */,
@@ -147,6 +196,13 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		C1F8546A2C2C2B50003EBA99 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		EA3E76A8246982A545F8C89E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +234,7 @@
 				C1EDDFDB2C2AFFAC00D6FA62 /* Sources */,
 				C1EDDFDC2C2AFFAC00D6FA62 /* Frameworks */,
 				C1EDDFDD2C2AFFAC00D6FA62 /* Resources */,
+				C1BA72FE2C2D5860007E28A5 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,6 +292,12 @@
 			mainGroup = C1EDDFD52C2AFFAC00D6FA62;
 			productRefGroup = C1EDDFE02C2AFFAC00D6FA62 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C1BA72DD2C2D563E007E28A5 /* Products */;
+					ProjectRef = C1BA72DC2C2D563E007E28A5 /* Domain.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C1EDDFDE2C2AFFAC00D6FA62 /* Presentation */,
@@ -242,6 +305,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C1BA72E22C2D563E007E28A5 /* Domain.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Domain.framework;
+			remoteRef = C1BA72E12C2D563E007E28A5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C1BA72E42C2D563E007E28A5 /* DomainTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DomainTests.xctest;
+			remoteRef = C1BA72E32C2D563E007E28A5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C1EDDFDD2C2AFFAC00D6FA62 /* Resources */ = {

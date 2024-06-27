@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Pokemon {
+public struct Pokemon {
     var id: UUID = .init()
     let name: String
     let url: String

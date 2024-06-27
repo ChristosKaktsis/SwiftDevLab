@@ -22,17 +22,12 @@ enum PokemonMapper {
     }
 }
 
-struct PokemonRepositoryImpl {
-    typealias PokemonInstance = (RemoteDataSource) -> PokemonRepositoryImpl
+public struct PokemonRepositoryImpl {
     
     fileprivate let remote: RemoteDataSource
     
-    private init(remote: RemoteDataSource) {
+    init(remote: RemoteDataSource = RemoteDataSource.shared) {
         self.remote = remote
-    }
-    
-    static let sharedInstance: PokemonInstance = {  remoteRepo in
-        return PokemonRepositoryImpl(remote: remoteRepo)
     }
 }
 

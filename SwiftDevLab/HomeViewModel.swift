@@ -30,7 +30,6 @@ class HomeViewModel: BaseViewModel {
     }
     
     private func createTestUser() {
-        let testUser = TestModel(id: "1", name: "Chris Test")
     }
 }
  

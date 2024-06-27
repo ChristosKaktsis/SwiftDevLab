@@ -36,7 +36,7 @@ public class PokemonCoordinator: Coordinator {
         switch action {
         case _ as GoToList:
             let vm = PokemonListViewModel(actionHandler: self)
-            let vc = PokemonListVC()
+            let vc = PokemonListVC(viewModel: vm)
             navigationController.pushViewController(vc, animated: false)
         default:
             handleBaseAction(action: action)

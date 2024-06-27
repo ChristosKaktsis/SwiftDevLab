@@ -7,14 +7,16 @@
 
 import Foundation
 
-protocol GetPokemonsUseCase {
+public protocol GetPokemonsUseCase {
     func execute(offset: Int, limit: Int) async throws -> Result<[Pokemon], Error>
 }
 
-struct GetPokemonsUseImpl: GetPokemonsUseCase{
-     let repo: PokemonRepositoryProtocol
+public struct GetPokemonsUseImpl: GetPokemonsUseCase{
+    let repo: PokemonRepositoryProtocol = PokemonRepositoryImpl()
     
-    func execute(offset: Int, limit: Int) async throws -> Result<[Pokemon], Error> {
+    public init() {}
+    
+    public func execute(offset: Int, limit: Int) async throws -> Result<[Pokemon], Error> {
         do {
             let pokemons = try await repo.getPokemons(offset: offset, limit: limit)
             return .success(pokemons)
