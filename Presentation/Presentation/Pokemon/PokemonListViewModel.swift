@@ -7,6 +7,7 @@
 
 import Foundation
 import Domain
+import Combine
 
 enum PokemonEvents {
     case fetchData
@@ -17,9 +18,11 @@ class PokemonListViewModel: BaseViewModel {
     private weak var actionHandler: BaseActionHandler?
     typealias Event = PokemonEvents
     
-    var isLoading: Bool
-    var pokemons: [Pokemon]
+    @Published var isLoading: Bool
+    @Published var pokemons: [Pokemon]
     var errorMessage: String
+    
+    var cancellables = Set<AnyCancellable>()
     
     init(actionHandler: BaseActionHandler? = nil) {
         self.actionHandler = actionHandler
@@ -32,29 +35,25 @@ class PokemonListViewModel: BaseViewModel {
     func onTriggeredEvent(event: Event) {
         switch event {
         case .fetchData:
-            Task {
-                do {
-                    try await getPokemons(offset: 0, limit: 10)
-                } catch {
-                    print(error)
-                }
-            }
+            getPokemons(offset: 0, limit: 10)
         }
     }
     
-    func getPokemons(offset: Int, limit: Int) async throws {
+    func getPokemons(offset: Int, limit: Int) {
         isLoading = true
-        let result = try await getPokemonsUseCase.execute(offset: offset, limit: limit)
-        switch result {
-        case .success(let pokemons):
-            self.pokemons = pokemons
-            self.isLoading = false
-            for pokemon in pokemons { 
-                print(pokemon)
+        Task {
+            do {
+                let result = try await getPokemonsUseCase.execute(offset: offset, limit: limit)
+                self.isLoading = false
+                switch result {
+                case .success(let pokemons):
+                    self.pokemons = pokemons
+                case .failure(let failure):
+                    self.errorMessage = failure.localizedDescription
+                }
+            } catch {
+                print(error)
             }
-        case .failure(let failure):
-            self.isLoading = false
-            self.errorMessage = failure.localizedDescription
         }
     }
 }

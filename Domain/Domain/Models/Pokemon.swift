@@ -8,9 +8,9 @@
 import Foundation
 
 public struct Pokemon {
-    var id: UUID = .init()
-    let name: String
-    let url: String
+    public var id: UUID = .init()
+    public let name: String
+    public let url: String
     
     var imageUrl: String {
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/\(url.split(separator: "/").last ?? "1").png"
