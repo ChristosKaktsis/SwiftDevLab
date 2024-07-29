@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="SwiftDevLab" customModuleProvider="target">
             <connections>
+                <outlet property="pokemonButton" destination="0VV-wP-zMs" id="NFM-ZS-jrl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,6 +25,15 @@
                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                     <connections>
                         <action selector="navButtonTapped:" destination="-1" eventType="touchUpInside" id="F6z-bP-xB3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCU-Aw-UDT" userLabel="Map Button">
+                    <rect key="frame" x="159" y="512" width="75" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="MapButtonTapped:" destination="-1" eventType="touchUpInside" id="8Io-57-2IA"/>
                     </connections>
                 </button>
             </subviews>

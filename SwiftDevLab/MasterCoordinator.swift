@@ -9,20 +9,20 @@ import Foundation
 import UIKit
 import Presentation
 
-struct GoToTest: Action {}
-struct GoToPokemon: Action {}
-
 class MasterCoordinator: Coordinator {
     var parentCoordinator: Coordinator?
     
-    func handleAction(action: Action) {
+    func handleAction(action: BaseAction) {
         switch action {
-        case _ as GoToTest:
+        case .goToTest:
             let vc = TestNavigateVC()
             self.navigationController.pushViewController(vc, animated: true)
-        case _ as GoToPokemon:
+        case .goToPokemon:
             let coordinator = PokemonCoordinator(parentCoordinator: self, navigationController: navigationController)
             childCoordinators.append(coordinator)
+        case .goToMap:
+            let vc = MapDrawVC()
+            self.navigationController.pushViewController(vc, animated: true)
         default:
             handleBaseAction(action: action)
         }

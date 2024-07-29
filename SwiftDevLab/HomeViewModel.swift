@@ -11,6 +11,7 @@ import Presentation
 
 enum HomeEvents {
     case GoToTest
+    case GoToMap
 }
 
 class HomeViewModel: BaseViewModel {
@@ -25,7 +26,9 @@ class HomeViewModel: BaseViewModel {
     func onTriggeredEvent(event: Event) {
         switch event {
         case .GoToTest:
-            actionHandler?.handleAction(action: GoToPokemon())
+            actionHandler?.handleAction(action: .goToPokemon)
+        case .GoToMap:
+            actionHandler?.handleAction(action: .goToMap)
         }
     }
     

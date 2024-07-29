@@ -8,9 +8,15 @@
 import Foundation
 import UIKit
 
-public protocol Action {}
+public enum BaseAction {
+    case goToPokemon
+    case goToTest
+    case goToPokemonList
+    case goToMap
+}
+
 /** This protocol must be conformed from Coordinator in order to handle coordinator actions */
 public protocol BaseActionHandler: AnyObject {
-    func handleBaseAction(action: Action)
-    func handleAction(action: Action)
+    func handleBaseAction(action: BaseAction)
+    func handleAction(action: BaseAction)
 }

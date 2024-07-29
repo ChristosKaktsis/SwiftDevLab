@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0F4EA8597AA6B407F2CF7D5B /* Pods_SwiftDevLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A22E51A2C7EEC98CF53767F6 /* Pods_SwiftDevLab.framework */; };
 		206FB550A055CD2DCB8929C9 /* Pods_SwiftDevLabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C208CB994198D9C62F33E9BF /* Pods_SwiftDevLabTests.framework */; };
+		C1AE7C1C2C32AA54004B2694 /* MapDrawVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AE7C1A2C32AA54004B2694 /* MapDrawVC.swift */; };
+		C1AE7C1D2C32AA54004B2694 /* MapDrawVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1AE7C1B2C32AA54004B2694 /* MapDrawVC.xib */; };
 		C1B84D642C25778800FBD7D0 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B84D622C25778800FBD7D0 /* HomeVC.swift */; };
 		C1B84D652C25778800FBD7D0 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1B84D632C25778800FBD7D0 /* HomeVC.xib */; };
 		C1B84D7C2C25872300FBD7D0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B84D7B2C25872300FBD7D0 /* HomeViewModel.swift */; };
@@ -94,6 +96,8 @@
 		9133A8C5617FC4046016972C /* Pods-SwiftDevLab-SwiftDevLabUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDevLab-SwiftDevLabUITests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftDevLab-SwiftDevLabUITests/Pods-SwiftDevLab-SwiftDevLabUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A22E51A2C7EEC98CF53767F6 /* Pods_SwiftDevLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDevLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16141FD6BCAB994EC15728E /* Pods-SwiftDevLabTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDevLabTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftDevLabTests/Pods-SwiftDevLabTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C1AE7C1A2C32AA54004B2694 /* MapDrawVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDrawVC.swift; sourceTree = "<group>"; };
+		C1AE7C1B2C32AA54004B2694 /* MapDrawVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapDrawVC.xib; sourceTree = "<group>"; };
 		C1B84D622C25778800FBD7D0 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		C1B84D632C25778800FBD7D0 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		C1B84D7B2C25872300FBD7D0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -233,6 +237,8 @@
 				C1B84D622C25778800FBD7D0 /* HomeVC.swift */,
 				C1B84D632C25778800FBD7D0 /* HomeVC.xib */,
 				C1B84D7B2C25872300FBD7D0 /* HomeViewModel.swift */,
+				C1AE7C1A2C32AA54004B2694 /* MapDrawVC.swift */,
+				C1AE7C1B2C32AA54004B2694 /* MapDrawVC.xib */,
 			);
 			path = SwiftDevLab;
 			sourceTree = "<group>";
@@ -405,6 +411,7 @@
 			files = (
 				C1F57E792C2439D800DD3B90 /* LaunchScreen.storyboard in Resources */,
 				C1B84D652C25778800FBD7D0 /* HomeVC.xib in Resources */,
+				C1AE7C1D2C32AA54004B2694 /* MapDrawVC.xib in Resources */,
 				C1F57E762C2439D800DD3B90 /* Assets.xcassets in Resources */,
 				C1F57EDA2C24480300DD3B90 /* TestNavigateVC.xib in Resources */,
 			);
@@ -502,6 +509,7 @@
 			files = (
 				C1B84D642C25778800FBD7D0 /* HomeVC.swift in Sources */,
 				C1B84D7C2C25872300FBD7D0 /* HomeViewModel.swift in Sources */,
+				C1AE7C1C2C32AA54004B2694 /* MapDrawVC.swift in Sources */,
 				C1F57EC12C243F1100DD3B90 /* MasterCoordinator.swift in Sources */,
 				C1F57ED92C24480300DD3B90 /* TestNavigateVC.swift in Sources */,
 				C1F57E6D2C2439D800DD3B90 /* AppDelegate.swift in Sources */,

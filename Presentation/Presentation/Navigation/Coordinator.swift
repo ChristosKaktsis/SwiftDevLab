@@ -21,7 +21,7 @@ public protocol Coordinator: AnyObject, BaseActionHandler {
 }
 
 extension Coordinator {
-    public func handleBaseAction(action: Action) {
+    public func handleBaseAction(action: BaseAction) {
         
     }
 }

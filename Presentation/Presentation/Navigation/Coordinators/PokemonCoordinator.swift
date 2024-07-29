@@ -8,8 +8,6 @@
 import Foundation
 import UIKit
 
-struct GoToList: Action {}
-
 public class PokemonCoordinator: Coordinator {
     
     public var parentCoordinator: Coordinator?
@@ -29,12 +27,12 @@ public class PokemonCoordinator: Coordinator {
     }
     
     public func start() {
-        handleAction(action: GoToList())
+        handleAction(action: .goToPokemonList)
     }
     
-    public func handleAction(action: Action) {
+    public func handleAction(action: BaseAction) {
         switch action {
-        case _ as GoToList:
+        case .goToPokemonList:
             let vm = PokemonListViewModel(actionHandler: self)
             let vc = PokemonListVC(viewModel: vm)
             navigationController.pushViewController(vc, animated: false)

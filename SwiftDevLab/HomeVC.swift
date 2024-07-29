@@ -11,6 +11,8 @@ class HomeVC: UIViewController {
     
     private let viewModel: HomeViewModel
     
+    @IBOutlet weak var pokemonButton: UIButton!
+    
     init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
         super.init(nibName: String(describing: type(of: self)), bundle: Bundle(for: type(of: self)))
@@ -22,8 +24,16 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
     }
     
+    private func setupView() {
+        pokemonButton.setTitle("Go to Pokemon", for: .normal)
+    }
+    
+    @IBAction func MapButtonTapped(_ sender: Any) {
+        viewModel.onTriggeredEvent(event: .GoToMap)
+    }
     @IBAction func navButtonTapped(_ sender: Any) {
         viewModel.onTriggeredEvent(event: .GoToTest)
     }
