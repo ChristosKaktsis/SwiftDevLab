@@ -3,6 +3,11 @@ platform :ios, '15.0'
 
 workspace 'SwiftDevLab.xcworkspace'
 
+target 'Data' do
+  project './Data/Data.project'
+  use_frameworks!
+end
+
 target 'Domain' do
   project './Domain/Domain.project'
   use_frameworks!
