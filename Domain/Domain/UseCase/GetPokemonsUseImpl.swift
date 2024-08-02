@@ -11,11 +11,11 @@ public protocol GetPokemonsUseCase {
     func execute(offset: Int, limit: Int) async throws -> Result<[Pokemon], Error>
 }
 
-public struct GetPokemonsUseImpl: GetPokemonsUseCase{
-    let repo: PokemonRepositoryProtocol = PokemonRepositoryImpl()
-    
-    public init() {}
-    
+public class GetPokemonsUseImpl: GetPokemonsUseCase {
+    let repo: PokemonRepositoryProtocol
+    public init(repo: PokemonRepositoryProtocol) {
+        self.repo = repo
+    }
     public func execute(offset: Int, limit: Int) async throws -> Result<[Pokemon], Error> {
         do {
             let pokemons = try await repo.getPokemons(offset: offset, limit: limit)

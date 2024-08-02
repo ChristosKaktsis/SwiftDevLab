@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C1562ADC2C5A2B6D0049EF0D /* PokemonRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1562ADB2C5A2B6D0049EF0D /* PokemonRepositoryImpl.swift */; };
+		C1562ADE2C5A2BCD0049EF0D /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1562ADD2C5A2BCD0049EF0D /* RemoteDataSource.swift */; };
+		C1562AF12C5A2CF10049EF0D /* PokemonDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1562AF02C5A2CF10049EF0D /* PokemonDTO.swift */; };
+		C1562AF42C5A2DA20049EF0D /* PokemonMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1562AF32C5A2DA20049EF0D /* PokemonMapper.swift */; };
+		C1DF9BAB2C5CF672006B8CF8 /* InjectDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DF9BAA2C5CF672006B8CF8 /* InjectDependencies.swift */; };
 		C1F48D2F2C5A206E00625C30 /* Data.docc in Sources */ = {isa = PBXBuildFile; fileRef = C1F48D2E2C5A206E00625C30 /* Data.docc */; };
 		C1F48D352C5A206E00625C30 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F48D2A2C5A206E00625C30 /* Data.framework */; };
 		C1F48D3A2C5A206E00625C30 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F48D392C5A206E00625C30 /* DataTests.swift */; };
@@ -15,6 +20,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C1562AD72C5A2B440049EF0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1562AD22C5A2B440049EF0D /* Domain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C1EDDFA12C2AA13E00D6FA62;
+			remoteInfo = Domain;
+		};
+		C1562AD92C5A2B440049EF0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1562AD22C5A2B440049EF0D /* Domain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C1EDDFAB2C2AA13E00D6FA62;
+			remoteInfo = DomainTests;
+		};
 		C1F48D362C5A206E00625C30 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C1F48D212C5A206E00625C30 /* Project object */;
@@ -27,6 +46,12 @@
 /* Begin PBXFileReference section */
 		1BA9AC66F27D17E28B6E6D83 /* Pods_Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7F76B7B06AB94CF9DB647E /* Pods-Data.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Data.debug.xcconfig"; path = "Target Support Files/Pods-Data/Pods-Data.debug.xcconfig"; sourceTree = "<group>"; };
+		C1562AD22C5A2B440049EF0D /* Domain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Domain.xcodeproj; path = ../../../Domain/Domain.xcodeproj; sourceTree = "<group>"; };
+		C1562ADB2C5A2B6D0049EF0D /* PokemonRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRepositoryImpl.swift; sourceTree = "<group>"; };
+		C1562ADD2C5A2BCD0049EF0D /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
+		C1562AF02C5A2CF10049EF0D /* PokemonDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDTO.swift; sourceTree = "<group>"; };
+		C1562AF32C5A2DA20049EF0D /* PokemonMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonMapper.swift; sourceTree = "<group>"; };
+		C1DF9BAA2C5CF672006B8CF8 /* InjectDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectDependencies.swift; sourceTree = "<group>"; };
 		C1F48D2A2C5A206E00625C30 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F48D2D2C5A206E00625C30 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		C1F48D2E2C5A206E00625C30 /* Data.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Data.docc; sourceTree = "<group>"; };
@@ -73,6 +98,55 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C1562ACF2C5A2AF70049EF0D /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				C1562ADB2C5A2B6D0049EF0D /* PokemonRepositoryImpl.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		C1562AD12C5A2B3B0049EF0D /* Dependecies */ = {
+			isa = PBXGroup;
+			children = (
+				C1562AD22C5A2B440049EF0D /* Domain.xcodeproj */,
+			);
+			path = Dependecies;
+			sourceTree = "<group>";
+		};
+		C1562AD32C5A2B440049EF0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1562AD82C5A2B440049EF0D /* Domain.framework */,
+				C1562ADA2C5A2B440049EF0D /* DomainTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1562ADF2C5A2CAB0049EF0D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C1562AF02C5A2CF10049EF0D /* PokemonDTO.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C1562AF22C5A2D870049EF0D /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				C1562AF32C5A2DA20049EF0D /* PokemonMapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		C1DF9BA72C5CF664006B8CF8 /* Di */ = {
+			isa = PBXGroup;
+			children = (
+				C1DF9BAA2C5CF672006B8CF8 /* InjectDependencies.swift */,
+			);
+			path = Di;
+			sourceTree = "<group>";
+		};
 		C1F48D202C5A206E00625C30 = {
 			isa = PBXGroup;
 			children = (
@@ -96,8 +170,10 @@
 		C1F48D2C2C5A206E00625C30 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				C1DF9BA72C5CF664006B8CF8 /* Di */,
+				C1562AD12C5A2B3B0049EF0D /* Dependecies */,
+				C1562ACF2C5A2AF70049EF0D /* Repositories */,
 				C1F48D492C5A243800625C30 /* PersistentStorages */,
-				C1F48D482C5A242300625C30 /* Repositories */,
 				C1F48D472C5A241B00625C30 /* Network */,
 				C1F48D2D2C5A206E00625C30 /* Data.h */,
 				C1F48D2E2C5A206E00625C30 /* Data.docc */,
@@ -116,15 +192,11 @@
 		C1F48D472C5A241B00625C30 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				C1562AF22C5A2D870049EF0D /* Mappers */,
+				C1562ADF2C5A2CAB0049EF0D /* Models */,
+				C1562ADD2C5A2BCD0049EF0D /* RemoteDataSource.swift */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		C1F48D482C5A242300625C30 /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repositories;
 			sourceTree = "<group>";
 		};
 		C1F48D492C5A243800625C30 /* PersistentStorages */ = {
@@ -214,6 +286,12 @@
 			mainGroup = C1F48D202C5A206E00625C30;
 			productRefGroup = C1F48D2B2C5A206E00625C30 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C1562AD32C5A2B440049EF0D /* Products */;
+					ProjectRef = C1562AD22C5A2B440049EF0D /* Domain.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C1F48D292C5A206E00625C30 /* Data */,
@@ -221,6 +299,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C1562AD82C5A2B440049EF0D /* Domain.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Domain.framework;
+			remoteRef = C1562AD72C5A2B440049EF0D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C1562ADA2C5A2B440049EF0D /* DomainTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DomainTests.xctest;
+			remoteRef = C1562AD92C5A2B440049EF0D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C1F48D282C5A206E00625C30 /* Resources */ = {
@@ -270,6 +365,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1F48D2F2C5A206E00625C30 /* Data.docc in Sources */,
+				C1562ADE2C5A2BCD0049EF0D /* RemoteDataSource.swift in Sources */,
+				C1562ADC2C5A2B6D0049EF0D /* PokemonRepositoryImpl.swift in Sources */,
+				C1DF9BAB2C5CF672006B8CF8 /* InjectDependencies.swift in Sources */,
+				C1562AF42C5A2DA20049EF0D /* PokemonMapper.swift in Sources */,
+				C1562AF12C5A2CF10049EF0D /* PokemonDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +584,7 @@
 		C1F48D422C5A206E00625C30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YNMVQCYBUU;
@@ -500,6 +601,7 @@
 		C1F48D432C5A206E00625C30 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YNMVQCYBUU;

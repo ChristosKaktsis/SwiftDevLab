@@ -14,7 +14,10 @@ enum PokemonEvents {
 }
 
 class PokemonListViewModel: BaseViewModel {
-    let getPokemonsUseCase: GetPokemonsUseCase
+    
+    @Injected(\.pokemonDataContext)
+    var getPokemonsUseCase: GetPokemonsUseCase
+    
     private weak var actionHandler: BaseActionHandler?
     typealias Event = PokemonEvents
     
@@ -29,7 +32,6 @@ class PokemonListViewModel: BaseViewModel {
         self.isLoading = false
         self.pokemons = []
         self.errorMessage = ""
-        self.getPokemonsUseCase = GetPokemonsUseImpl()
     }
     
     func onTriggeredEvent(event: Event) {

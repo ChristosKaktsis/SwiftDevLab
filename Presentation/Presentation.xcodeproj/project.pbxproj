@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		15C7D06744BBB030DEE6AEA4 /* Pods_Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD67E69205A003635F64978 /* Pods_Presentation.framework */; };
+		C18D5A042C5D26070045D9E7 /* Data.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C1DF9BB72C5CF82D006B8CF8 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C1BA73012C2D5871007E28A5 /* Domain.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C1BA72E22C2D563E007E28A5 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C1DF9BB02C5CF7BE006B8CF8 /* InjectDataContexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DF9BAF2C5CF7BE006B8CF8 /* InjectDataContexts.swift */; };
 		C1EDDFE42C2AFFAC00D6FA62 /* Presentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = C1EDDFE32C2AFFAC00D6FA62 /* Presentation.docc */; };
 		C1EDDFEA2C2AFFAC00D6FA62 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1EDDFDF2C2AFFAC00D6FA62 /* Presentation.framework */; };
 		C1EDDFEF2C2AFFAC00D6FA62 /* PresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDDFEE2C2AFFAC00D6FA62 /* PresentationTests.swift */; };
@@ -37,6 +39,20 @@
 			remoteGlobalIDString = C1EDDFAB2C2AA13E00D6FA62;
 			remoteInfo = DomainTests;
 		};
+		C1DF9BB62C5CF82D006B8CF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1DF9BB12C5CF82D006B8CF8 /* Data.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C1F48D2A2C5A206E00625C30;
+			remoteInfo = Data;
+		};
+		C1DF9BB82C5CF82D006B8CF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1DF9BB12C5CF82D006B8CF8 /* Data.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C1F48D342C5A206E00625C30;
+			remoteInfo = DataTests;
+		};
 		C1EDDFEB2C2AFFAC00D6FA62 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C1EDDFD62C2AFFAC00D6FA62 /* Project object */;
@@ -54,6 +70,7 @@
 			dstSubfolderSpec = 7;
 			files = (
 				C1BA73012C2D5871007E28A5 /* Domain.framework in Copy Frameworks */,
+				C18D5A042C5D26070045D9E7 /* Data.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,7 +80,10 @@
 /* Begin PBXFileReference section */
 		4808BEF0768D28E65F2DE9D2 /* Pods-Presentation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation.debug.xcconfig"; path = "Target Support Files/Pods-Presentation/Pods-Presentation.debug.xcconfig"; sourceTree = "<group>"; };
 		6FD67E69205A003635F64978 /* Pods_Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C18D5A002C5D25E50045D9E7 /* Pods_Data.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Data.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SwiftDevLab-anmfhvsvizxtfkatieyxhfqwzxue/Build/Products/Debug-iphoneos/Pods_Data.framework"; sourceTree = "<group>"; };
 		C1BA72DC2C2D563E007E28A5 /* Domain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Domain.xcodeproj; path = ../../../Domain/Domain.xcodeproj; sourceTree = "<group>"; };
+		C1DF9BAF2C5CF7BE006B8CF8 /* InjectDataContexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectDataContexts.swift; sourceTree = "<group>"; };
+		C1DF9BB12C5CF82D006B8CF8 /* Data.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Data.xcodeproj; path = ../../../Data/Data.xcodeproj; sourceTree = "<group>"; };
 		C1EDDFDF2C2AFFAC00D6FA62 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1EDDFE22C2AFFAC00D6FA62 /* Presentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
 		C1EDDFE32C2AFFAC00D6FA62 /* Presentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Presentation.docc; sourceTree = "<group>"; };
@@ -112,6 +132,7 @@
 		C1BA72DB2C2D5611007E28A5 /* Dependecies */ = {
 			isa = PBXGroup;
 			children = (
+				C1DF9BB12C5CF82D006B8CF8 /* Data.xcodeproj */,
 				C1BA72DC2C2D563E007E28A5 /* Domain.xcodeproj */,
 			);
 			path = Dependecies;
@@ -126,9 +147,27 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C1DF9BAC2C5CF7B5006B8CF8 /* Di */ = {
+			isa = PBXGroup;
+			children = (
+				C1DF9BAF2C5CF7BE006B8CF8 /* InjectDataContexts.swift */,
+			);
+			path = Di;
+			sourceTree = "<group>";
+		};
+		C1DF9BB22C5CF82D006B8CF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1DF9BB72C5CF82D006B8CF8 /* Data.framework */,
+				C1DF9BB92C5CF82D006B8CF8 /* DataTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C1EDDFD52C2AFFAC00D6FA62 = {
 			isa = PBXGroup;
 			children = (
+				C18D5A002C5D25E50045D9E7 /* Pods_Data.framework */,
 				C1EDDFE12C2AFFAC00D6FA62 /* Presentation */,
 				C1EDDFED2C2AFFAC00D6FA62 /* PresentationTests */,
 				C1EDDFE02C2AFFAC00D6FA62 /* Products */,
@@ -149,6 +188,7 @@
 		C1EDDFE12C2AFFAC00D6FA62 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C1DF9BAC2C5CF7B5006B8CF8 /* Di */,
 				C1BA72DB2C2D5611007E28A5 /* Dependecies */,
 				C1F8546A2C2C2B50003EBA99 /* Components */,
 				C1F8545C2C2C1A92003EBA99 /* Navigation */,
@@ -294,6 +334,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = C1DF9BB22C5CF82D006B8CF8 /* Products */;
+					ProjectRef = C1DF9BB12C5CF82D006B8CF8 /* Data.xcodeproj */;
+				},
+				{
 					ProductGroup = C1BA72DD2C2D563E007E28A5 /* Products */;
 					ProjectRef = C1BA72DC2C2D563E007E28A5 /* Domain.xcodeproj */;
 				},
@@ -319,6 +363,20 @@
 			fileType = wrapper.cfbundle;
 			path = DomainTests.xctest;
 			remoteRef = C1BA72E32C2D563E007E28A5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C1DF9BB72C5CF82D006B8CF8 /* Data.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Data.framework;
+			remoteRef = C1DF9BB62C5CF82D006B8CF8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C1DF9BB92C5CF82D006B8CF8 /* DataTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DataTests.xctest;
+			remoteRef = C1DF9BB82C5CF82D006B8CF8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -373,6 +431,7 @@
 			files = (
 				C1F854012C2BFAF5003EBA99 /* PokemonListViewModel.swift in Sources */,
 				C1F854042C2BFBBE003EBA99 /* PokemonListVC.swift in Sources */,
+				C1DF9BB02C5CF7BE006B8CF8 /* InjectDataContexts.swift in Sources */,
 				C1F854672C2C1B74003EBA99 /* PokemonCoordinator.swift in Sources */,
 				C1F854692C2C1DD2003EBA99 /* BaseViewModel.swift in Sources */,
 				C1F854642C2C1AC3003EBA99 /* Coordinator.swift in Sources */,

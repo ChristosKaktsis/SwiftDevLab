@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C1922F3DEC51033483EF4E39 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06602A6E74E58678D2AFC1E /* Pods_Domain.framework */; };
+		C1DF9BA42C5CF3B1006B8CF8 /* CustomInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DF9BA32C5CF3B1006B8CF8 /* CustomInjection.swift */; };
 		C1EDDFA62C2AA13E00D6FA62 /* Domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = C1EDDFA52C2AA13E00D6FA62 /* Domain.docc */; };
 		C1EDDFAC2C2AA13E00D6FA62 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1EDDFA12C2AA13E00D6FA62 /* Domain.framework */; };
 		C1EDDFB12C2AA13E00D6FA62 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDDFB02C2AA13E00D6FA62 /* DomainTests.swift */; };
 		C1EDDFB22C2AA13E00D6FA62 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = C1EDDFA42C2AA13E00D6FA62 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C1EDDFC82C2AA33100D6FA62 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDDFC72C2AA33100D6FA62 /* TestModel.swift */; };
 		C1EDDFCB2C2AE22300D6FA62 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDDFCA2C2AE22300D6FA62 /* Pokemon.swift */; };
-		C1EDDFCD2C2AE39500D6FA62 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDDFCC2C2AE39500D6FA62 /* RemoteDataSource.swift */; };
-		C1EDDFCF2C2AE3EB00D6FA62 /* PokemonRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDDFCE2C2AE3EB00D6FA62 /* PokemonRepositoryImpl.swift */; };
+		C1EDDFCF2C2AE3EB00D6FA62 /* PokemonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDDFCE2C2AE3EB00D6FA62 /* PokemonRepository.swift */; };
 		C1EDDFD42C2AE4E900D6FA62 /* GetPokemonsUseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDDFD32C2AE4E900D6FA62 /* GetPokemonsUseImpl.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +32,7 @@
 /* Begin PBXFileReference section */
 		4C9F05AE6C89E3581A2C3993 /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
 		C06602A6E74E58678D2AFC1E /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1DF9BA32C5CF3B1006B8CF8 /* CustomInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInjection.swift; sourceTree = "<group>"; };
 		C1EDDFA12C2AA13E00D6FA62 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1EDDFA42C2AA13E00D6FA62 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		C1EDDFA52C2AA13E00D6FA62 /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
@@ -39,8 +40,7 @@
 		C1EDDFB02C2AA13E00D6FA62 /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
 		C1EDDFC72C2AA33100D6FA62 /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		C1EDDFCA2C2AE22300D6FA62 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
-		C1EDDFCC2C2AE39500D6FA62 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
-		C1EDDFCE2C2AE3EB00D6FA62 /* PokemonRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRepositoryImpl.swift; sourceTree = "<group>"; };
+		C1EDDFCE2C2AE3EB00D6FA62 /* PokemonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRepository.swift; sourceTree = "<group>"; };
 		C1EDDFD32C2AE4E900D6FA62 /* GetPokemonsUseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPokemonsUseImpl.swift; sourceTree = "<group>"; };
 		CB275588121B938BBA675448 /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +75,14 @@
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
+		C1DF9BA22C5CF38C006B8CF8 /* Di */ = {
+			isa = PBXGroup;
+			children = (
+				C1DF9BA32C5CF3B1006B8CF8 /* CustomInjection.swift */,
+			);
+			path = Di;
+			sourceTree = "<group>";
+		};
 		C1EDDF972C2AA13E00D6FA62 = {
 			isa = PBXGroup;
 			children = (
@@ -98,11 +106,11 @@
 		C1EDDFA32C2AA13E00D6FA62 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				C1DF9BA22C5CF38C006B8CF8 /* Di */,
 				C1EDDFD22C2AE4D400D6FA62 /* UseCase */,
 				C1EDDFD02C2AE41500D6FA62 /* Models */,
 				C1EDDFA42C2AA13E00D6FA62 /* Domain.h */,
 				C1EDDFA52C2AA13E00D6FA62 /* Domain.docc */,
-				C1EDDFCC2C2AE39500D6FA62 /* RemoteDataSource.swift */,
 				C1F48D4A2C5A273900625C30 /* Interfaces */,
 			);
 			path = Domain;
@@ -128,7 +136,7 @@
 		C1EDDFD12C2AE44600D6FA62 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				C1EDDFCE2C2AE3EB00D6FA62 /* PokemonRepositoryImpl.swift */,
+				C1EDDFCE2C2AE3EB00D6FA62 /* PokemonRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -293,10 +301,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1EDDFD42C2AE4E900D6FA62 /* GetPokemonsUseImpl.swift in Sources */,
-				C1EDDFCD2C2AE39500D6FA62 /* RemoteDataSource.swift in Sources */,
 				C1EDDFA62C2AA13E00D6FA62 /* Domain.docc in Sources */,
+				C1DF9BA42C5CF3B1006B8CF8 /* CustomInjection.swift in Sources */,
 				C1EDDFC82C2AA33100D6FA62 /* TestModel.swift in Sources */,
-				C1EDDFCF2C2AE3EB00D6FA62 /* PokemonRepositoryImpl.swift in Sources */,
+				C1EDDFCF2C2AE3EB00D6FA62 /* PokemonRepository.swift in Sources */,
 				C1EDDFCB2C2AE22300D6FA62 /* Pokemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,20 +1,20 @@
 //
 //  RemoteDataSource.swift
-//  Domain
+//  Data
 //
-//  Created by Christos Kaktsis on 25/6/24.
+//  Created by Christos Kaktsis on 31/7/24.
 //
 
 import Foundation
+import Domain
 
-protocol RemoteDataSoureProtocol{
+public protocol RemoteDataSoureProtocol{
     func getPokemons(offset: Int, limit: Int) async throws -> PokemonResponse
 }
 
 struct RemoteDataSource {
-    private init() {}
-    
-    static let shared: RemoteDataSource = RemoteDataSource()
+    public init() {}
+//    static let shared: RemoteDataSource = RemoteDataSource()
 }
 
 extension RemoteDataSource: RemoteDataSoureProtocol{

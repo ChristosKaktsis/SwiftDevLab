@@ -12,18 +12,14 @@ public struct Pokemon {
     public let name: String
     public let url: String
     
-    var imageUrl: String {
+    public var imageUrl: String {
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/\(url.split(separator: "/").last ?? "1").png"
         
     }
-}
-
-struct PokemonResponse: Decodable {
-    let count: Int?
-    let results: [PokemonEntryResponse]?
-}
-
-struct PokemonEntryResponse: Decodable {
-    let name: String?
-    let url: String?
+    
+    public init(id: UUID, name: String, url: String) {
+        self.id = id
+        self.name = name
+        self.url = url
+    }
 }

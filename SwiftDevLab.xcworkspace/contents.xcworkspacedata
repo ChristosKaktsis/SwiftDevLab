@@ -5,10 +5,10 @@
       location = "group:Data/Data.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Presentation/Presentation.xcodeproj">
+      location = "group:Domain/Domain.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Domain/Domain.xcodeproj">
+      location = "group:Presentation/Presentation.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:SwiftDevLab.xcodeproj">
