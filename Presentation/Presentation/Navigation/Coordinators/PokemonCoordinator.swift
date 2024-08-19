@@ -35,7 +35,8 @@ public class PokemonCoordinator: Coordinator {
         case .goToPokemonList:
             let vm = PokemonListViewModel(actionHandler: self)
             let vc = PokemonListVC(viewModel: vm)
-            navigationController.pushViewController(vc, animated: false)
+            let screen = PokemonListScreen()
+            navigate(to: screen, with: .push)
         default:
             handleBaseAction(action: action)
         }
