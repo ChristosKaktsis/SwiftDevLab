@@ -6,10 +6,50 @@
 //
 
 import SwiftUI
+import Domain
 
 struct PokemonListScreen: View {
+    @State private var viewModel = ViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            let pokemons = viewModel.pokemons
+            ForEach(pokemons, id: \.id) { pokemon in
+                Text(pokemon.name)
+                    .font(.headline)
+                    .padding()
+            }
+        }.onAppear {
+            viewModel.getPokemons(offset: 0, limit: 10)
+        }
+    }
+}
+
+extension PokemonListScreen {
+    @Observable
+    class ViewModel {
+        var getPokemonsUseCase: GetPokemonsUseCase = InjectedValues[\.pokemonDataContext]
+        var isLoading: Bool = false
+        var pokemons: [Pokemon] = []
+        var errorMessage: String = ""
+        
+        func getPokemons(offset: Int, limit: Int) {
+            isLoading = true
+            Task {
+                do {
+                    let result = try await self.getPokemonsUseCase.execute(offset: offset, limit: limit)
+                    self.isLoading = false
+                    switch result {
+                    case .success(let pokemons):
+                        self.pokemons = pokemons
+                    case .failure(let failure):
+                        self.errorMessage = failure.localizedDescription
+                    }
+                } catch {
+                    print(error)
+                }
+            }
+        }
     }
 }
 
