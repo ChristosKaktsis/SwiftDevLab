@@ -11,6 +11,7 @@
 		C1562ADE2C5A2BCD0049EF0D /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1562ADD2C5A2BCD0049EF0D /* RemoteDataSource.swift */; };
 		C1562AF12C5A2CF10049EF0D /* PokemonDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1562AF02C5A2CF10049EF0D /* PokemonDTO.swift */; };
 		C1562AF42C5A2DA20049EF0D /* PokemonMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1562AF32C5A2DA20049EF0D /* PokemonMapper.swift */; };
+		C1D481B62C7C898E00B00DC9 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1562AD82C5A2B440049EF0D /* Domain.framework */; };
 		C1DF9BAB2C5CF672006B8CF8 /* InjectDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DF9BAA2C5CF672006B8CF8 /* InjectDependencies.swift */; };
 		C1F48D2F2C5A206E00625C30 /* Data.docc in Sources */ = {isa = PBXBuildFile; fileRef = C1F48D2E2C5A206E00625C30 /* Data.docc */; };
 		C1F48D352C5A206E00625C30 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F48D2A2C5A206E00625C30 /* Data.framework */; };
@@ -65,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1D481B62C7C898E00B00DC9 /* Domain.framework in Frameworks */,
 				E7FC3D7C8636400566D398FB /* Pods_Data.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

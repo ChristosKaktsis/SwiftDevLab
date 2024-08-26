@@ -11,6 +11,7 @@
 		206FB550A055CD2DCB8929C9 /* Pods_SwiftDevLabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C208CB994198D9C62F33E9BF /* Pods_SwiftDevLabTests.framework */; };
 		C1AE7C1C2C32AA54004B2694 /* MapDrawVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AE7C1A2C32AA54004B2694 /* MapDrawVC.swift */; };
 		C1AE7C1D2C32AA54004B2694 /* MapDrawVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1AE7C1B2C32AA54004B2694 /* MapDrawVC.xib */; };
+		C1AF602A2C77807C005614A3 /* ColorPalete.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AF60292C77807C005614A3 /* ColorPalete.swift */; };
 		C1B84D642C25778800FBD7D0 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B84D622C25778800FBD7D0 /* HomeVC.swift */; };
 		C1B84D652C25778800FBD7D0 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1B84D632C25778800FBD7D0 /* HomeVC.xib */; };
 		C1B84D7C2C25872300FBD7D0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B84D7B2C25872300FBD7D0 /* HomeViewModel.swift */; };
@@ -113,6 +114,7 @@
 		C18D59F12C5D24FE0045D9E7 /* Data.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Data.xcodeproj; path = Data/Data.xcodeproj; sourceTree = SOURCE_ROOT; };
 		C1AE7C1A2C32AA54004B2694 /* MapDrawVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDrawVC.swift; sourceTree = "<group>"; };
 		C1AE7C1B2C32AA54004B2694 /* MapDrawVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapDrawVC.xib; sourceTree = "<group>"; };
+		C1AF60292C77807C005614A3 /* ColorPalete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalete.swift; sourceTree = "<group>"; };
 		C1B84D622C25778800FBD7D0 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		C1B84D632C25778800FBD7D0 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		C1B84D7B2C25872300FBD7D0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -188,6 +190,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C17196CC2C78CC2D00AA3459 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C17196CD2C78CC3800AA3459 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C17196CD2C78CC3800AA3459 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C18D59F22C5D24FE0045D9E7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +268,7 @@
 		C1F57E6B2C2439D800DD3B90 /* SwiftDevLab */ = {
 			isa = PBXGroup;
 			children = (
+				C17196CC2C78CC2D00AA3459 /* Helpers */,
 				C1F57E6C2C2439D800DD3B90 /* AppDelegate.swift */,
 				C1F57E6E2C2439D800DD3B90 /* SceneDelegate.swift */,
 				C1F57E752C2439D800DD3B90 /* Assets.xcassets */,
@@ -264,6 +282,7 @@
 				C1B84D7B2C25872300FBD7D0 /* HomeViewModel.swift */,
 				C1AE7C1A2C32AA54004B2694 /* MapDrawVC.swift */,
 				C1AE7C1B2C32AA54004B2694 /* MapDrawVC.xib */,
+				C1AF60292C77807C005614A3 /* ColorPalete.swift */,
 			);
 			path = SwiftDevLab;
 			sourceTree = "<group>";
@@ -556,6 +575,7 @@
 				C1F57EC12C243F1100DD3B90 /* MasterCoordinator.swift in Sources */,
 				C1F57ED92C24480300DD3B90 /* TestNavigateVC.swift in Sources */,
 				C1F57E6D2C2439D800DD3B90 /* AppDelegate.swift in Sources */,
+				C1AF602A2C77807C005614A3 /* ColorPalete.swift in Sources */,
 				C1F57E6F2C2439D800DD3B90 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

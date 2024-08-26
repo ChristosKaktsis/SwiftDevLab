@@ -10,16 +10,29 @@ import Domain
 
 struct PokemonListScreen: View {
     @State private var viewModel = ViewModel()
-    
+    let columns = [
+        GridItem(.flexible()), // First column
+        GridItem(.flexible()), // Second column
+    ]
     var body: some View {
-        VStack {
-            let pokemons = viewModel.pokemons
-            ForEach(pokemons, id: \.id) { pokemon in
-                Text(pokemon.name)
-                    .font(.headline)
+        ZStack {
+            if viewModel.isLoading {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .scaleEffect(2.5)
                     .padding()
             }
-        }.onAppear {
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 10) {
+                    let pokemons = viewModel.pokemons
+                    ForEach(pokemons, id: \.id) { pokemon in
+                        PokemonView(name: pokemon.name)
+                    }
+                }
+                .padding()
+            }
+        }
+        .onAppear {
             viewModel.getPokemons(offset: 0, limit: 10)
         }
     }
