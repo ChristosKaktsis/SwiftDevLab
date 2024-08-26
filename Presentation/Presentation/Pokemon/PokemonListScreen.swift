@@ -26,7 +26,7 @@ struct PokemonListScreen: View {
                 LazyVGrid(columns: columns, spacing: 10) {
                     let pokemons = viewModel.pokemons
                     ForEach(pokemons, id: \.id) { pokemon in
-                        PokemonView(name: pokemon.name)
+                        PokemonView(pokemon: pokemon)
                     }
                 }
                 .padding()

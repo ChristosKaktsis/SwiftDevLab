@@ -20,8 +20,12 @@ extension PokemonRepositoryImpl: PokemonRepositoryProtocol {
     public func getPokemons(offset: Int, limit: Int) async throws -> [Pokemon] {
         do {
             let data = try await remote.getPokemons(offset: offset, limit: limit)
-            
-            return PokemonMapper.mapPokemonsResponseToDomain(input: data.results ?? [])
+            var detailedpokemons: [PokemonEntryResponse] = []
+            for item in data.results ?? [] {
+                let details = try await remote.getPokemon(url: item.url ?? "")
+                detailedpokemons.append(details)
+            }
+            return PokemonMapper.mapPokemonsResponseToDomain(input: detailedpokemons)
         } catch {
             throw error
         }

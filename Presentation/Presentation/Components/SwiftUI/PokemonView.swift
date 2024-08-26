@@ -6,21 +6,23 @@
 //
 
 import SwiftUI
+import Domain
 
 struct PokemonView: View {
-    let name: String
+    let pokemon: Pokemon
     var body: some View {
         VStack(alignment: .leading) {
-            PokemonImage()
+            PokemonImage(imageUrl: pokemon.imageUrl)
                 .clipShape(.rect(cornerRadius: 5.0))
-            Text("#0001")
+            Text(String(format: "#%04d", pokemon.id))
                 .foregroundStyle(ColorPalette.DarkGray.value.swiftUIColor)
                 .font(.system(size: 10))
                 .padding(.bottom, 8)
-            Text(name).font(.system(size: 12))
+            Text(pokemon.name).font(.system(size: 12))
             HStack{
-                PokemonTypeView()
-                PokemonTypeView()
+                ForEach(pokemon.types, id: \.name) { item in
+                    PokemonTypeView(type: item.name)
+                }
             }
         }
         .padding()
@@ -28,24 +30,45 @@ struct PokemonView: View {
 }
 
 struct PokemonImage: View {
+    let imageUrl: String
     var body: some View {
         ZStack {
             Rectangle()
                 .fill(ColorPalette.LightGray.value.swiftUIColor)
-            Image(systemName: "fish")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .padding(16)
+            if let imageUrl = URL(string: imageUrl) {
+                AsyncImage(url: imageUrl) { phase in
+                            switch phase {
+                            case .empty:
+                                ProgressView() // Shows a loading spinner while the image is being loaded
+                            case .success(let image):
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit) // Adjusts the image to fit within its container
+                            case .failure:
+                                Image(systemName: "exclamationmark.triangle")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .foregroundColor(.red) // Displays an error image if the loading fails
+                            @unknown default:
+                                EmptyView()
+                            }
+                        }
+                    .padding(16)
+            } else {
+                Text("Invalid URL")
+            }
+            
         }
     }
 }
 
 struct PokemonTypeView: View {
+    let type: String
     var body: some View {
         ZStack {
             Rectangle()
                 .fill(ColorPalette.Red.value.swiftUIColor)
-            Text("TYPE")
+            Text(type)
                 .foregroundStyle(ColorPalette.White.value.swiftUIColor)
                 .font(.system(size: 10))
         }
@@ -55,5 +78,5 @@ struct PokemonTypeView: View {
 }
 
 #Preview {
-    PokemonView(name: "NAME")
+    PokemonView(pokemon: Pokemon(id: 1, name: "NAME", url: "", types: [PokemonType(name: "TYPE 1")]))
 }

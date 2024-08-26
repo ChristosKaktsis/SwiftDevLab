@@ -12,9 +12,18 @@ enum PokemonMapper {
     static func mapPokemonsResponseToDomain(input response: [PokemonEntryResponse]) -> [Pokemon] {
         return response.map { result in
             return Pokemon(
-                id: UUID(),
+                id: result.id ?? Int(),
                 name: result.name ?? "Unknown",
-                url: result.url ?? "Unknown"
+                url: result.url ?? "Unknown",
+                types: self.mapPokemonTypes(input: result.types ?? [])
+            )
+        }
+    }
+    
+   static func mapPokemonTypes(input responseTypes: [PokemonTypeResponse]) -> [PokemonType] {
+        return responseTypes.map { result in
+            return PokemonType(
+                name: result.type?.name ?? ""
             )
         }
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C14963FA2C7C9528009D3397 /* PokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14963F92C7C9528009D3397 /* PokemonType.swift */; };
 		C1922F3DEC51033483EF4E39 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06602A6E74E58678D2AFC1E /* Pods_Domain.framework */; };
 		C1DF9BA42C5CF3B1006B8CF8 /* CustomInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DF9BA32C5CF3B1006B8CF8 /* CustomInjection.swift */; };
 		C1EDDFA62C2AA13E00D6FA62 /* Domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = C1EDDFA52C2AA13E00D6FA62 /* Domain.docc */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		4C9F05AE6C89E3581A2C3993 /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
 		C06602A6E74E58678D2AFC1E /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C14963F92C7C9528009D3397 /* PokemonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonType.swift; sourceTree = "<group>"; };
 		C1DF9BA32C5CF3B1006B8CF8 /* CustomInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInjection.swift; sourceTree = "<group>"; };
 		C1EDDFA12C2AA13E00D6FA62 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1EDDFA42C2AA13E00D6FA62 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				C1EDDFC72C2AA33100D6FA62 /* TestModel.swift */,
 				C1EDDFCA2C2AE22300D6FA62 /* Pokemon.swift */,
+				C14963F92C7C9528009D3397 /* PokemonType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				C1EDDFC82C2AA33100D6FA62 /* TestModel.swift in Sources */,
 				C1EDDFCF2C2AE3EB00D6FA62 /* PokemonRepository.swift in Sources */,
 				C1EDDFCB2C2AE22300D6FA62 /* Pokemon.swift in Sources */,
+				C14963FA2C7C9528009D3397 /* PokemonType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

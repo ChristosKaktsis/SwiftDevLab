@@ -10,6 +10,7 @@ import Domain
 
 public protocol RemoteDataSoureProtocol{
     func getPokemons(offset: Int, limit: Int) async throws -> PokemonResponse
+    func getPokemon(url: String) async throws -> PokemonEntryResponse
 }
 
 struct RemoteDataSource {
@@ -18,6 +19,28 @@ struct RemoteDataSource {
 }
 
 extension RemoteDataSource: RemoteDataSoureProtocol{
+    func getPokemon(url: String) async throws -> PokemonEntryResponse {
+        // Define the URL
+        guard let url = URL(string: url) else {
+            throw URLError(.badURL)
+        }
+        
+        // Create the URLSession
+        let session = URLSession.shared
+        
+        // Perform the request using async/await
+        let (data, response) = try await session.data(from: url)
+        
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            throw URLError(.badServerResponse)
+        }
+        
+        // Decode the JSON data
+        let decoder = JSONDecoder()
+        let apiResponse = try decoder.decode(PokemonEntryResponse.self, from: data)
+        return apiResponse
+    }
+    
     
     func getPokemons(offset: Int, limit: Int) async throws -> PokemonResponse {
         // Define the URL

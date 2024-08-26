@@ -8,18 +8,20 @@
 import Foundation
 
 public struct Pokemon {
-    public var id: UUID = .init()
+    public var id: Int = .init()
     public let name: String
     public let url: String
+    public let types: [PokemonType]
     
     public var imageUrl: String {
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/\(url.split(separator: "/").last ?? "1").png"
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/\(id).png"
         
     }
     
-    public init(id: UUID, name: String, url: String) {
+    public init(id: Int, name: String, url: String, types: [PokemonType]) {
         self.id = id
         self.name = name
         self.url = url
+        self.types = types
     }
 }
