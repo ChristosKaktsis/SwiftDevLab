@@ -26,6 +26,7 @@ public enum ColorPalette: ColorDefinition {
     case LightGreen
     case ExtraLightGreen
     case XXLightGreen
+    case BugGreen
     case DarkGray
     case LightGray
     case Opacity70
@@ -37,6 +38,19 @@ public enum ColorPalette: ColorDefinition {
     case White
     case Black
     case Red
+    case FairyPink
+    case PsyPink
+    case Orange
+    case DarkOrange
+    case GhostPurple
+    case PoisonPurple
+    case ElectricYellow
+    case GroundYellow
+    case DragonBlue
+    case FlyingBlue
+    case IceBlue
+    case WaterBlue
+    case Rock
     
     case custom(hexString: String)
     
@@ -79,6 +93,8 @@ public extension ColorPalette {
             instanceColor = UIColor(hexString: "#D7FFF4")
         case .XXLightGreen:
             instanceColor = UIColor(hexString: "#EBFFF9")
+        case .BugGreen:
+            instanceColor = UIColor(hexString: "#7c9e4d")
         case .DarkGray:
             instanceColor = UIColor(hexString: "#808080")
         case .LightGray:
@@ -103,6 +119,32 @@ public extension ColorPalette {
             instanceColor = UIColor(hexString: hexString)
         case .Red:
             instanceColor = UIColor(hexString: "#ff0000")
+        case .FairyPink:
+            instanceColor = UIColor(hexString: "#f3bce6")
+        case .PsyPink:
+            instanceColor = UIColor(hexString: "#e26fb6")
+        case .Orange:
+            instanceColor = UIColor(hexString: "#ed843e")
+        case .DarkOrange:
+            instanceColor = UIColor(hexString: "#c76d36")
+        case .GhostPurple:
+            instanceColor = UIColor(hexString: "#77639f")
+        case .PoisonPurple:
+            instanceColor = UIColor(hexString: "#b081c4")
+        case .ElectricYellow:
+            instanceColor = UIColor(hexString: "#ead657")
+        case .GroundYellow:
+            instanceColor = UIColor(hexString: "#f3df5f")
+        case .DragonBlue:
+            instanceColor = UIColor(hexString: "#67a2cb")
+        case .FlyingBlue:
+            instanceColor = UIColor(hexString: "#69c4ea")
+        case .IceBlue:
+            instanceColor = UIColor(hexString: "#71c1e3")
+        case .WaterBlue:
+            instanceColor = UIColor(hexString: "#5990bf")
+        case .Rock:
+            instanceColor = UIColor(hexString: "#9f8d38")
         }
         return instanceColor
     }

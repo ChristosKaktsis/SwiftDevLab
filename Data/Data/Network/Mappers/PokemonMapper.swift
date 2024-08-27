@@ -22,8 +22,7 @@ enum PokemonMapper {
     
    static func mapPokemonTypes(input responseTypes: [PokemonTypeResponse]) -> [PokemonType] {
         return responseTypes.map { result in
-            return PokemonType(
-                name: result.type?.name ?? ""
+            return PokemonType(value: PokemonTypeCase(rawValue: result.type?.name ?? "") ?? .unknown
             )
         }
     }

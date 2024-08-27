@@ -20,8 +20,9 @@ struct PokemonView: View {
                 .padding(.bottom, 8)
             Text(pokemon.name).font(.system(size: 12))
             HStack{
-                ForEach(pokemon.types, id: \.name) { item in
-                    PokemonTypeView(type: item.name)
+                ForEach(pokemon.types, id: \.value) { item in
+                    PokemonTypeView(type: item)
+                        .fixedSize()
                 }
             }
         }
@@ -63,20 +64,21 @@ struct PokemonImage: View {
 }
 
 struct PokemonTypeView: View {
-    let type: String
+    let type: PokemonType
     var body: some View {
         ZStack {
             Rectangle()
-                .fill(ColorPalette.Red.value.swiftUIColor)
-            Text(type)
+                .fill(type.value.color.value.swiftUIColor)
+            Text(type.value.rawValue)
                 .foregroundStyle(ColorPalette.White.value.swiftUIColor)
                 .font(.system(size: 10))
+                .padding(.horizontal)
+                .padding(.vertical, 5)
         }
-        .frame(height: 16)
-        .cornerRadius(5.0)
+        .cornerRadius(3.0)
     }
 }
 
 #Preview {
-    PokemonView(pokemon: Pokemon(id: 1, name: "NAME", url: "", types: [PokemonType(name: "TYPE 1")]))
+    PokemonView(pokemon: Pokemon(id: 1, name: "NAME", url: "", types: [PokemonType(value: .normal)]))
 }
