@@ -23,6 +23,9 @@ class PokemonListViewModel: BaseViewModel {
     
     @Published var isLoading: Bool
     @Published var pokemons: [Pokemon]
+    
+    var offset: Int = 0
+    var limit = 15
     var errorMessage: String
     
     var cancellables = Set<AnyCancellable>()
@@ -37,11 +40,12 @@ class PokemonListViewModel: BaseViewModel {
     func onTriggeredEvent(event: Event) {
         switch event {
         case .fetchData:
-            getPokemons(offset: 0, limit: 10)
+            getPokemons(offset: offset, limit: limit)
         }
     }
     
     func getPokemons(offset: Int, limit: Int) {
+        guard !isLoading else { return }
         isLoading = true
         Task {
             do {
@@ -50,6 +54,7 @@ class PokemonListViewModel: BaseViewModel {
                 switch result {
                 case .success(let pokemons):
                     self.pokemons = pokemons
+                    self.offset += self.limit
                 case .failure(let failure):
                     self.errorMessage = failure.localizedDescription
                 }
