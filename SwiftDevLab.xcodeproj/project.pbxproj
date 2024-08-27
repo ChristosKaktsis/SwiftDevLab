@@ -15,6 +15,8 @@
 		C1B84D642C25778800FBD7D0 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B84D622C25778800FBD7D0 /* HomeVC.swift */; };
 		C1B84D652C25778800FBD7D0 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1B84D632C25778800FBD7D0 /* HomeVC.xib */; };
 		C1B84D7C2C25872300FBD7D0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B84D7B2C25872300FBD7D0 /* HomeViewModel.swift */; };
+		C1CCF97A2C7E12CA005B16A0 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18D59F72C5D24FE0045D9E7 /* Data.framework */; };
+		C1CCF97B2C7E12CA005B16A0 /* Data.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C18D59F72C5D24FE0045D9E7 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C1EDDFC62C2AA2EF00D6FA62 /* Domain.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C1EDDFC22C2AA28100D6FA62 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C1EDE0082C2B001700D6FA62 /* Presentation.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C1EDE0012C2AFFC800D6FA62 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C1F57E6D2C2439D800DD3B90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F57E6C2C2439D800DD3B90 /* AppDelegate.swift */; };
@@ -90,12 +92,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		C1CCF95E2C7E10A4005B16A0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C1EDDFC52C2AA2B300D6FA62 /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C1CCF97B2C7E12CA005B16A0 /* Data.framework in Copy Frameworks */,
 				C1EDDFC62C2AA2EF00D6FA62 /* Domain.framework in Copy Frameworks */,
 				C1EDE0082C2B001700D6FA62 /* Presentation.framework in Copy Frameworks */,
 			);
@@ -144,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1CCF97A2C7E12CA005B16A0 /* Data.framework in Frameworks */,
 				0F4EA8597AA6B407F2CF7D5B /* Pods_SwiftDevLab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +330,7 @@
 				C1F57E662C2439D800DD3B90 /* Frameworks */,
 				C1F57E672C2439D800DD3B90 /* Resources */,
 				C1EDDFC52C2AA2B300D6FA62 /* Copy Frameworks */,
+				C1CCF95E2C7E10A4005B16A0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

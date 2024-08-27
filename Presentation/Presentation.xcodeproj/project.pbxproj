@@ -11,9 +11,9 @@
 		C14963FC2C7CC1A4009D3397 /* _Ext_PokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14963FB2C7CC1A4009D3397 /* _Ext_PokemonType.swift */; };
 		C17196D12C78CCD700AA3459 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17196D02C78CCD700AA3459 /* ColorPalette.swift */; };
 		C17196D42C78CD7300AA3459 /* _Ext_UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17196D32C78CD7300AA3459 /* _Ext_UIColor.swift */; };
-		C18D5A042C5D26070045D9E7 /* Data.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C1DF9BB72C5CF82D006B8CF8 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C1AF60052C777B5D005614A3 /* PokemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AF60042C777B5D005614A3 /* PokemonView.swift */; };
-		C1BA73012C2D5871007E28A5 /* Domain.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C1BA72E22C2D563E007E28A5 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C1CCF9582C7E0FFF005B16A0 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DF9BB72C5CF82D006B8CF8 /* Data.framework */; };
+		C1CCF9592C7E1004005B16A0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BA72E22C2D563E007E28A5 /* Domain.framework */; };
 		C1D446782C735F1800443807 /* PokemonListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D446772C735F1800443807 /* PokemonListScreen.swift */; };
 		C1DF9BB02C5CF7BE006B8CF8 /* InjectDataContexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DF9BAF2C5CF7BE006B8CF8 /* InjectDataContexts.swift */; };
 		C1EDDFE42C2AFFAC00D6FA62 /* Presentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = C1EDDFE32C2AFFAC00D6FA62 /* Presentation.docc */; };
@@ -67,21 +67,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		C1BA72FE2C2D5860007E28A5 /* Copy Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 7;
-			files = (
-				C1BA73012C2D5871007E28A5 /* Domain.framework in Copy Frameworks */,
-				C18D5A042C5D26070045D9E7 /* Data.framework in Copy Frameworks */,
-			);
-			name = "Copy Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		4808BEF0768D28E65F2DE9D2 /* Pods-Presentation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation.debug.xcconfig"; path = "Target Support Files/Pods-Presentation/Pods-Presentation.debug.xcconfig"; sourceTree = "<group>"; };
 		6FD67E69205A003635F64978 /* Pods_Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1CCF9592C7E1004005B16A0 /* Domain.framework in Frameworks */,
+				C1CCF9582C7E0FFF005B16A0 /* Data.framework in Frameworks */,
 				15C7D06744BBB030DEE6AEA4 /* Pods_Presentation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,7 +298,6 @@
 				C1EDDFDB2C2AFFAC00D6FA62 /* Sources */,
 				C1EDDFDC2C2AFFAC00D6FA62 /* Frameworks */,
 				C1EDDFDD2C2AFFAC00D6FA62 /* Resources */,
-				C1BA72FE2C2D5860007E28A5 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
