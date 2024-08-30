@@ -15,28 +15,32 @@ struct PokemonListScreen: View {
         GridItem(.flexible()), // Second column
     ]
     var body: some View {
-        ZStack {
-            if viewModel.isLoading {
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle())
-                    .scaleEffect(2.5)
-                    .padding()
-            }
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 10) {
-                    let pokemons = viewModel.pokemons
-                    ForEach(pokemons, id: \.id) { pokemon in
-                        PokemonView(pokemon: pokemon)
-                    }
-                    Color.clear // Just to trigger onAppear
-                        .onAppear {
-                            viewModel.onTriggeredEvent(event: .fetchData)
-                        }
+        VStack {
+            CustomToolbar()
+            ZStack {
+                if viewModel.isLoading {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .scaleEffect(2.5)
+                        .padding()
                 }
-                .padding()
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 10) {
+                        let pokemons = viewModel.pokemons
+                        ForEach(pokemons, id: \.id) { pokemon in
+                            PokemonView(pokemon: pokemon)
+                        }
+                        Color.clear // Just to trigger onAppear
+                            .onAppear {
+                                viewModel.onTriggeredEvent(event: .fetchData)
+                            }
+                    }
+                    .padding()
+                }
             }
         }
     }
+    
 }
 
 extension PokemonListScreen {
@@ -47,7 +51,7 @@ extension PokemonListScreen {
         var pokemons: [Pokemon] = []
         var errorMessage: String = ""
         var offset: Int = 0
-        var limit = 15
+        var limit = 20
         
         func onTriggeredEvent(event: PokemonEvents) {
             switch event {

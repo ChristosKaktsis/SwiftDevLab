@@ -15,15 +15,56 @@ enum Event {
 
 public protocol Coordinator: AnyObject, BaseActionHandler {
     var parentCoordinator: Coordinator? { get set }
-    var childCoordinators: [Coordinator] { get set }
+    var childCoordinators: [CoordinatorKey: Coordinator] { get set }
     var navigationController: UINavigationController { get set}
+    var coordinatorKey: CoordinatorKey { get }
     
     func start()
+    func stop(completion: (() -> Void)?)
+    func dismiss(animated: Bool, completion: (() -> Void)?)
+    func addChild(coordinator: Coordinator, with key: CoordinatorKey)
+    func removeChild(coordinator: Coordinator)
 }
 
 extension Coordinator {
     public func handleBaseAction(action: BaseAction) {
         
+    }
+    public func addChild(
+        coordinator: Coordinator,
+        with key: CoordinatorKey
+    ) {
+        childCoordinators[key] = coordinator
+    }
+    
+    public func removeChild(coordinator: Coordinator) {
+        childCoordinators = childCoordinators.filter {
+            $0.value !== coordinator
+        }
+    }
+    
+    public func removeChild(_ key: CoordinatorKey) {
+        if let coord = childCoordinators[key] {
+            removeChild(coordinator: coord)
+            print("Coordinator with key: \(key) removed")
+        }
+    }
+    
+    public func getCoordingator(_ key: CoordinatorKey) -> Coordinator? {
+        return childCoordinators[key]
+    }
+    
+    public func stop(completion: (() -> Void)? = nil) {
+        self.parentCoordinator?.removeChild(coordinator: self)
+        completion?()
+    }
+    
+    public func dismiss(animated: Bool = true, completion: (() -> Void)? = nil) {
+        navigationController.dismiss(animated: animated) { [weak self] in
+            guard let self = self else { return }
+            completion?()
+            self.stop()
+        }
     }
 }
 

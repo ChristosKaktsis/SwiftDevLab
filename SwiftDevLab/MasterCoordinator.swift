@@ -10,6 +10,11 @@ import UIKit
 import Presentation
 
 class MasterCoordinator: Coordinator {
+    
+    var childCoordinators: [CoordinatorKey : Coordinator]
+    
+    let coordinatorKey: CoordinatorKey = .Master
+    
     var parentCoordinator: Coordinator?
     
     func handleAction(action: BaseAction) {
@@ -19,7 +24,7 @@ class MasterCoordinator: Coordinator {
             self.navigationController.pushViewController(vc, animated: true)
         case .goToPokemon:
             let coordinator = PokemonCoordinator(parentCoordinator: self, navigationController: navigationController)
-            childCoordinators.append(coordinator)
+            addChild(coordinator: coordinator, with: .Pokemon)
         case .goToMap:
             let vc = MapDrawVC()
             self.navigationController.pushViewController(vc, animated: true)
@@ -28,12 +33,13 @@ class MasterCoordinator: Coordinator {
         }
     }
     
-    var childCoordinators = [Coordinator]()
-    
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController){
         self.navigationController = navigationController
+        // Hide the toolbar for this view controller
+        self.navigationController.navigationBar.isHidden = true
+        self.childCoordinators = [:]
     }
     
     func start() {

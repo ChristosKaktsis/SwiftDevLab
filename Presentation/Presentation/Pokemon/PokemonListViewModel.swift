@@ -53,7 +53,7 @@ class PokemonListViewModel: BaseViewModel {
                 self.isLoading = false
                 switch result {
                 case .success(let pokemons):
-                    self.pokemons = pokemons
+                    self.pokemons += pokemons
                     self.offset += self.limit
                 case .failure(let failure):
                     self.errorMessage = failure.localizedDescription

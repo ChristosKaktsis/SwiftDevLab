@@ -12,7 +12,7 @@ extension PokemonTypeCase {
     public var color: ColorPalette {
         switch self {
         case .normal:
-            return .DarkGray
+            return .Gray
         case .fire:
             return .Orange
         case .water:

@@ -27,6 +27,7 @@ public enum ColorPalette: ColorDefinition {
     case ExtraLightGreen
     case XXLightGreen
     case BugGreen
+    case Gray
     case DarkGray
     case LightGray
     case Opacity70
@@ -95,6 +96,8 @@ public extension ColorPalette {
             instanceColor = UIColor(hexString: "#EBFFF9")
         case .BugGreen:
             instanceColor = UIColor(hexString: "#7c9e4d")
+        case .Gray:
+            instanceColor = UIColor(hexString: "#abb2b9")
         case .DarkGray:
             instanceColor = UIColor(hexString: "#808080")
         case .LightGray:
