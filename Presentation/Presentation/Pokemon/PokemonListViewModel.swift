@@ -11,9 +11,10 @@ import Combine
 
 enum PokemonEvents {
     case fetchData
+    case goBack
 }
 
-class PokemonListViewModel: BaseViewModel {
+class PokemonListViewModel: BaseViewModel, ObservableObject {
     
     @Injected(\.pokemonDataContext)
     var getPokemonsUseCase: GetPokemonsUseCase
@@ -41,6 +42,8 @@ class PokemonListViewModel: BaseViewModel {
         switch event {
         case .fetchData:
             getPokemons(offset: offset, limit: limit)
+        case .goBack:
+            actionHandler?.handleAction(action: .stop)
         }
     }
     
@@ -53,8 +56,10 @@ class PokemonListViewModel: BaseViewModel {
                 self.isLoading = false
                 switch result {
                 case .success(let pokemons):
-                    self.pokemons += pokemons
-                    self.offset += self.limit
+                    await MainActor.run {
+                        self.pokemons += pokemons
+                        self.offset += self.limit
+                    }
                 case .failure(let failure):
                     self.errorMessage = failure.localizedDescription
                 }
@@ -65,3 +70,49 @@ class PokemonListViewModel: BaseViewModel {
     }
 }
 
+@Observable
+class PokemonListSwiftUIViewModel {
+    private weak var actionHandler: BaseActionHandler?
+    var getPokemonsUseCase: GetPokemonsUseCase = InjectedValues[\.pokemonDataContext]
+    var isLoading: Bool = false
+    var pokemons: [Pokemon] = []
+    var errorMessage: String = ""
+    var offset: Int = 0
+    var limit = 20
+    
+    init(actionHandler: BaseActionHandler? = nil) {
+        self.actionHandler = actionHandler
+    }
+    
+    func onTriggeredEvent(event: PokemonEvents) {
+        switch event {
+        case .fetchData:
+            getPokemons(offset: offset, limit: limit)
+        case .goBack:
+            actionHandler?.handleAction(action: .stop)
+        }
+    }
+    
+    func getPokemons(offset: Int, limit: Int) {
+        guard !isLoading else { return }
+        isLoading = true
+        Task {
+            do {
+                let result = try await self.getPokemonsUseCase.execute(offset: offset, limit: limit)
+                self.isLoading = false
+                switch result {
+                case .success(let pokemons):
+                    await MainActor.run {
+                        self.pokemons += pokemons
+                        self.offset += self.limit
+                    }
+                    
+                case .failure(let failure):
+                    self.errorMessage = failure.localizedDescription
+                }
+            } catch {
+                print(error)
+            }
+        }
+    }
+}

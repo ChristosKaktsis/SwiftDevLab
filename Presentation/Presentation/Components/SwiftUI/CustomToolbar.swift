@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct CustomToolbar: View {
+    let title: String
+    let onBackAction: (() -> Void)?
+    
     var body: some View {
         HStack(alignment: .center) {
             Button(action: {
-                print("Custom back button pressed!")
+                onBackAction?()
             }) {
                 HStack {
                     Image(systemName: "chevron.left")
@@ -20,8 +23,9 @@ struct CustomToolbar: View {
                         .foregroundStyle(ColorPalette.DarkGray.value.swiftUIColor)
                 }
             }
-            .padding(.trailing, 24)
-            Text("Header Title")
+            .padding(.trailing, 48)
+    
+            Text(title)
                 .font(.title)
                 .foregroundStyle(ColorPalette.DarkGray.value.swiftUIColor)
             
@@ -32,5 +36,7 @@ struct CustomToolbar: View {
 }
 
 #Preview {
-    CustomToolbar()
+    CustomToolbar(title: "HER") {
+        print("back action pressed")
+    }
 }

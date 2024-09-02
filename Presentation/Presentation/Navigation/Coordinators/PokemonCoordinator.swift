@@ -40,13 +40,14 @@ public class PokemonCoordinator: Coordinator {
                 coordinator: self
             )
         case .goToPokemonList:
-            let vm = PokemonListViewModel(actionHandler: self)
-            let vc = PokemonListVC(viewModel: vm)
-            let screen = PokemonListScreen()
-            navigate(to: screen, with: .push)
+//            let vm = PokemonListViewModel(actionHandler: self)
+//            let vc = PokemonListVC(viewModel: vm)
+            let vm = PokemonListSwiftUIViewModel(actionHandler: self)
+            let screen = PokemonListScreen(viewModel: vm)
+            navigate(to: screen, with: .push, animated: true)
         case .stop:
             self.stop {[weak self] in
-                self?.handleAction(action: .GENERAL_ACTION(action: .POP()))
+                self?.handleAction(action: .GENERAL_ACTION(action: .POP(animated: true)))
             }
         default:
             handleBaseAction(action: action)
