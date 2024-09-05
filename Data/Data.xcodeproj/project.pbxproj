@@ -155,6 +155,15 @@
 			path = Actors;
 			sourceTree = "<group>";
 		};
+		C1BAA60F2C89C88700585923 /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				C1BAA60B2C89ABE800585923 /* CacheEntryObject.swift */,
+				C1BAA60D2C89ACF900585923 /* NSCache+Subscript.swift */,
+			);
+			path = Caching;
+			sourceTree = "<group>";
+		};
 		C1DF9BA72C5CF664006B8CF8 /* Di */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +217,7 @@
 		C1F48D472C5A241B00625C30 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				C1BAA60F2C89C88700585923 /* Caching */,
 				C1BAA6062C89A8CE00585923 /* Actors */,
 				C1562AF22C5A2D870049EF0D /* Mappers */,
 				C1562ADF2C5A2CAB0049EF0D /* Models */,
@@ -219,8 +229,6 @@
 		C1F48D492C5A243800625C30 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				C1BAA60B2C89ABE800585923 /* CacheEntryObject.swift */,
-				C1BAA60D2C89ACF900585923 /* NSCache+Subscript.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
