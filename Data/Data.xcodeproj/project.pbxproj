@@ -11,6 +11,7 @@
 		C1562ADE2C5A2BCD0049EF0D /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1562ADD2C5A2BCD0049EF0D /* RemoteDataSource.swift */; };
 		C1562AF12C5A2CF10049EF0D /* PokemonDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1562AF02C5A2CF10049EF0D /* PokemonDTO.swift */; };
 		C1562AF42C5A2DA20049EF0D /* PokemonMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1562AF32C5A2DA20049EF0D /* PokemonMapper.swift */; };
+		C1BAA60A2C89A8DD00585923 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BAA6092C89A8DD00585923 /* Counter.swift */; };
 		C1D481B62C7C898E00B00DC9 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1562AD82C5A2B440049EF0D /* Domain.framework */; };
 		C1DF9BAB2C5CF672006B8CF8 /* InjectDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DF9BAA2C5CF672006B8CF8 /* InjectDependencies.swift */; };
 		C1F48D2F2C5A206E00625C30 /* Data.docc in Sources */ = {isa = PBXBuildFile; fileRef = C1F48D2E2C5A206E00625C30 /* Data.docc */; };
@@ -52,6 +53,7 @@
 		C1562ADD2C5A2BCD0049EF0D /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		C1562AF02C5A2CF10049EF0D /* PokemonDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDTO.swift; sourceTree = "<group>"; };
 		C1562AF32C5A2DA20049EF0D /* PokemonMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonMapper.swift; sourceTree = "<group>"; };
+		C1BAA6092C89A8DD00585923 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		C1DF9BAA2C5CF672006B8CF8 /* InjectDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectDependencies.swift; sourceTree = "<group>"; };
 		C1F48D2A2C5A206E00625C30 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F48D2D2C5A206E00625C30 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
@@ -141,6 +143,14 @@
 			path = Mappers;
 			sourceTree = "<group>";
 		};
+		C1BAA6062C89A8CE00585923 /* Actors */ = {
+			isa = PBXGroup;
+			children = (
+				C1BAA6092C89A8DD00585923 /* Counter.swift */,
+			);
+			path = Actors;
+			sourceTree = "<group>";
+		};
 		C1DF9BA72C5CF664006B8CF8 /* Di */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +204,7 @@
 		C1F48D472C5A241B00625C30 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				C1BAA6062C89A8CE00585923 /* Actors */,
 				C1562AF22C5A2D870049EF0D /* Mappers */,
 				C1562ADF2C5A2CAB0049EF0D /* Models */,
 				C1562ADD2C5A2BCD0049EF0D /* RemoteDataSource.swift */,
@@ -372,6 +383,7 @@
 				C1DF9BAB2C5CF672006B8CF8 /* InjectDependencies.swift in Sources */,
 				C1562AF42C5A2DA20049EF0D /* PokemonMapper.swift in Sources */,
 				C1562AF12C5A2CF10049EF0D /* PokemonDTO.swift in Sources */,
+				C1BAA60A2C89A8DD00585923 /* Counter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

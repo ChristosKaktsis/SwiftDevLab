@@ -19,14 +19,12 @@ struct CustomToolbar: View {
                 HStack {
                     Image(systemName: "chevron.left")
                         .foregroundColor(ColorPalette.DarkGray.value.swiftUIColor)
-                    Text("Back")
-                        .foregroundStyle(ColorPalette.DarkGray.value.swiftUIColor)
                 }
             }
-            .padding(.trailing, 48)
+            .padding(.trailing, 16)
     
             Text(title)
-                .font(.title)
+                .font(.title2)
                 .foregroundStyle(ColorPalette.DarkGray.value.swiftUIColor)
             
             Spacer()
