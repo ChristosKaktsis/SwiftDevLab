@@ -15,7 +15,6 @@ public struct Pokemon {
     
     public var imageUrl: String {
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/\(id).png"
-        
     }
     
     public init(id: Int, name: String, url: String, types: [PokemonType]) {
