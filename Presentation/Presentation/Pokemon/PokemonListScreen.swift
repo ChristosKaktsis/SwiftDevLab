@@ -27,19 +27,25 @@ struct PokemonListScreen: View {
                         .scaleEffect(2.5)
                         .padding()
                 }
-                ScrollView {
+                List {
                     LazyVGrid(columns: columns, spacing: 10) {
                         let pokemons = viewModel.pokemons
                         ForEach(pokemons, id: \.id) { pokemon in
                             PokemonView(pokemon: pokemon)
                         }
-                        Color.clear // Just to trigger onAppear
+                        
+                    }
+                    if !viewModel.isLoading {
+                        ProgressView()
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .foregroundColor(.black)
+                            .foregroundColor(.red)
                             .onAppear {
                                 viewModel.onTriggeredEvent(event: .fetchData)
                             }
                     }
-                    .padding()
                 }
+                .listStyle(.plain)
             }
         }
     }
