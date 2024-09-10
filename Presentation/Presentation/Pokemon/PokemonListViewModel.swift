@@ -78,7 +78,7 @@ class PokemonListSwiftUIViewModel {
     var pokemons: [Pokemon] = []
     var errorMessage: String = ""
     var offset: Int = 0
-    var limit = 20
+    var limit = 10
     
     init(actionHandler: BaseActionHandler? = nil) {
         self.actionHandler = actionHandler
@@ -114,5 +114,9 @@ class PokemonListSwiftUIViewModel {
                 print(error)
             }
         }
+    }
+    
+    func hasReachedEndPokemons(of pokemon: Pokemon) -> Bool {
+        pokemons.last?.id == pokemon.id
     }
 }

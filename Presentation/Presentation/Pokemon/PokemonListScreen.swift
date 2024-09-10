@@ -20,33 +20,22 @@ struct PokemonListScreen: View {
             CustomToolbar(title: "Pokemon") {
                 viewModel.onTriggeredEvent(event: .goBack)
             }
-            ZStack {
-                if viewModel.isLoading {
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle())
-                        .scaleEffect(2.5)
-                        .padding()
-                }
-                List {
-                    LazyVGrid(columns: columns, spacing: 10) {
-                        let pokemons = viewModel.pokemons
-                        ForEach(pokemons, id: \.id) { pokemon in
-                            PokemonView(pokemon: pokemon)
-                        }
-                        
-                    }
-                    if !viewModel.isLoading {
-                        ProgressView()
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .foregroundColor(.black)
-                            .foregroundColor(.red)
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 10) {
+                    let pokemons = viewModel.pokemons
+                    ForEach(pokemons, id: \.id) { pokemon in
+                        PokemonView(pokemon: pokemon)
                             .onAppear {
-                                viewModel.onTriggeredEvent(event: .fetchData)
+                                if viewModel.hasReachedEndPokemons(of: pokemon) {
+                                    viewModel.onTriggeredEvent(event: .fetchData)
+                                }
                             }
                     }
                 }
-                .listStyle(.plain)
             }
+        }
+        .onAppear {
+            viewModel.onTriggeredEvent(event: .fetchData)
         }
     }
 }
