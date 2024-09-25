@@ -29,6 +29,7 @@
 		C1F854642C2C1AC3003EBA99 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F854632C2C1AC3003EBA99 /* Coordinator.swift */; };
 		C1F854672C2C1B74003EBA99 /* PokemonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F854662C2C1B74003EBA99 /* PokemonCoordinator.swift */; };
 		C1F854692C2C1DD2003EBA99 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F854682C2C1DD2003EBA99 /* BaseViewModel.swift */; };
+		C1FC2EDC2CA420420013E63C /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FC2EDB2CA420420013E63C /* CachedAsyncImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		C1F854632C2C1AC3003EBA99 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C1F854662C2C1B74003EBA99 /* PokemonCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCoordinator.swift; sourceTree = "<group>"; };
 		C1F854682C2C1DD2003EBA99 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		C1FC2EDB2CA420420013E63C /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
 		D2F2BEBADB7917362F369156 /* Pods-Presentation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation.release.xcconfig"; path = "Target Support Files/Pods-Presentation/Pods-Presentation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 			children = (
 				C1AF60042C777B5D005614A3 /* PokemonView.swift */,
 				C1D453952C820D02000FFC01 /* CustomToolbar.swift */,
+				C1FC2EDB2CA420420013E63C /* CachedAsyncImage.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				C1D453962C820D02000FFC01 /* CustomToolbar.swift in Sources */,
 				C1D446782C735F1800443807 /* PokemonListScreen.swift in Sources */,
 				C1F854642C2C1AC3003EBA99 /* Coordinator.swift in Sources */,
+				C1FC2EDC2CA420420013E63C /* CachedAsyncImage.swift in Sources */,
 				C1F8545E2C2C1AA5003EBA99 /* BaseNavigation.swift in Sources */,
 				C1AF60052C777B5D005614A3 /* PokemonView.swift in Sources */,
 				C17196D42C78CD7300AA3459 /* _Ext_UIColor.swift in Sources */,

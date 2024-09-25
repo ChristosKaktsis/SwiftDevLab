@@ -36,24 +36,11 @@ struct PokemonImage: View {
         ZStack {
             Rectangle()
                 .fill(ColorPalette.LightGray.value.swiftUIColor)
-            AsyncImage(url: URL(string: imageUrl)) { phase in
-                switch phase {
-                case .empty:
-                    ProgressView() // Shows a loading spinner while the image is being loaded
-                case .success(let image):
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit) // Adjusts the image to fit within its container
-                case .failure:
-                    Image(systemName: "exclamationmark.triangle")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .foregroundColor(.red) // Displays an error image if the loading fails
-                @unknown default:
-                    EmptyView()
-                }
+            if let url = URL(string: imageUrl) {
+                CachedAsyncImage(url: url)
+                .padding(16)
             }
-            .padding(16)
+            
             
         }
     }
