@@ -21,10 +21,49 @@ public struct PokemonEntryResponse: Decodable {
     let height: Int?
     let weight: Int?
     let abilities: [PokemonAbilityResponse]?
+    
+    public func toDomain() -> Pokemon {
+        return Pokemon(
+            id: self.id ?? Int(),
+            name: self.name ?? "Unknown",
+            url: self.url ?? "Unknown",
+            types: self.typesToDomain(),
+            abilities: self.abilitiesToDomain(),
+            description: "",
+            weight: convertWeight(),
+            height: convertHeight()
+        )
+    }
+    
+    func typesToDomain() -> [PokemonType] {
+        return self.types?.map { type in
+            return type.toDomain()
+        } ?? []
+    }
+    
+    func abilitiesToDomain() -> [Ability] {
+        return self.abilities?.map { ability in
+            return ability.toDomain()
+        } ?? []
+    }
+    
+    func convertWeight() -> String {
+        return ((weight ?? 0) / 10).description
+    }
+    
+    func convertHeight() -> String {
+        return ((height ?? 0) / 10).description
+    }
 }
 
 public struct PokemonTypeResponse: Decodable {
     let type: PokemonNameType?
+    
+    func toDomain() -> PokemonType {
+        return PokemonType(
+            value: PokemonTypeCase(rawValue: self.type?.name ?? "") ?? .unknown
+        )
+    }
 }
 
 public struct PokemonNameType: Decodable {
@@ -32,14 +71,18 @@ public struct PokemonNameType: Decodable {
 }
 
 public struct AbilityResponse: Codable {
-    let name: String
-    let url: String
+    let name: String?
+    let url: String?
 }
 
 public struct PokemonAbilityResponse: Codable {
-    let ability: AbilityResponse
+    let ability: AbilityResponse?
     enum CodingKeys: String, CodingKey {
         case ability
+    }
+    
+    func toDomain() -> Ability {
+        return Ability(name: ability?.name ?? "", url: ability?.url ?? "")
     }
 }
 
